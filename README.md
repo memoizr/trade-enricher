@@ -1,4 +1,4 @@
-## Java Coding task
+## Java Coding Task
 
 #### How to run the project
 After cloning to your local machine you can try running the pre-built application using:
