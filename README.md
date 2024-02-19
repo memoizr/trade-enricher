@@ -55,3 +55,7 @@ For a production-ready solution I'd have gone for a containerized approach, but 
 ### Functional style
 In my experience I've done a fair bit of functional/reactive programming so that's my go-to style when I am given the freedom to choose an approach. That said, not all teams and projects are fully on board with this style, and in a real situation this is one of those things that should be discussed with the team first.
 
+### General approach
+In general, I tried to stick to a minimalistic, KISS approach, as I believe trying to reduce complexity unless needed is usually a winning strategy. I always try to write concise and readable code, preferring a functional/declarative approach when possible. Whenever I had to make a tradeoff between readability and performance/efficiency, I went with readability and simplicity, as I believe optimizing code for performance is usually a pointless exercise if you don't know exactly what constraints, use cases and targets we have (YAGNI and all that).  
+
+The code was written in a TDD way (outside in) approach. I started from the integration test and gradually added and extracted the necessary components. As a result, the code turned out to have 84% coverage by lines without having optimized for this metric at all, with most of the lines missing belonging to an Exception class. 
