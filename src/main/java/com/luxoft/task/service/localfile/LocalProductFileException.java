@@ -2,7 +2,7 @@ package com.luxoft.task.service.localfile;
 
 import java.io.IOException;
 
-public class LocalProductFileException extends IOException {
+public final class LocalProductFileException extends IOException {
 
     private final String filePath;
     private final IOException e;

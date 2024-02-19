@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import static org.slf4j.LoggerFactory.getLogger;
 
 @Service
-public class AppLogger {
+public final class AppLogger {
 
     private final Logger logger = getLogger("app");
 
