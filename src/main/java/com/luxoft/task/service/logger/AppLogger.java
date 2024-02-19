@@ -1,13 +1,14 @@
 package com.luxoft.task.service.logger;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
+import static org.slf4j.LoggerFactory.getLogger;
 
 @Service
 public class AppLogger {
 
-    private final Logger logger = LoggerFactory.getLogger("app");
+    private final Logger logger = getLogger("app");
 
     public void error(String message) {
         logger.error(message);

@@ -12,14 +12,14 @@ public final class TradeEnricher {
 
     private static final String MISSING_PRODUCT_NAME = "Missing Product Name";
 
-    private final ProductRepository productDataSource;
+    private final ProductRepository productRepository;
 
-    public TradeEnricher(ProductRepository productDataSource) {
-        this.productDataSource = productDataSource;
+    public TradeEnricher(ProductRepository productRepository) {
+        this.productRepository = productRepository;
     }
 
     public EnrichedTrade enrich(Trade trade) {
-        final var productName = productDataSource
+        final var productName = productRepository
                 .getById(trade.productId())
                 .map(Product::productName)
                 .orElse(MISSING_PRODUCT_NAME);

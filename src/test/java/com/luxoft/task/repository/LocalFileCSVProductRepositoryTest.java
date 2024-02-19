@@ -6,7 +6,6 @@ import com.luxoft.task.service.logger.AppLogger;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -14,13 +13,14 @@ import java.util.Optional;
 
 import static java.util.Optional.empty;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class LocalFileCSVProductRepositoryTest {
 
-    final LocalFileReader dataFileService = Mockito.mock(LocalFileReader.class);
-    final AppLogger logger = Mockito.mock(AppLogger.class);
+    final LocalFileReader dataFileService = mock(LocalFileReader.class);
+    final AppLogger logger = mock(AppLogger.class);
     final LocalFileCSVProductRepository productRepository = new LocalFileCSVProductRepository(dataFileService, logger);
 
     @BeforeEach

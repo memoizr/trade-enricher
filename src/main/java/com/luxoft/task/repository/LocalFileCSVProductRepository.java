@@ -38,7 +38,7 @@ public final class LocalFileCSVProductRepository implements ProductRepository, I
 
     @Override
     public void afterPropertiesSet() {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(localFileReader.readFile()))) {
+        try (var reader = new BufferedReader(new InputStreamReader(localFileReader.readFile()))) {
             reader.lines()
                     .skip(1) // Skip header
                     .map(line -> {
